@@ -1,0 +1,19 @@
+# requirements
+# python 3.7-last 
+
+
+# create environment python
+# install virtualenv
+pip install virtualenv
+# create environment
+# python<version> -m venv <virtual-environment-name>
+python3 -m venv env
+#Activate the Virtual Environment
+env\Scripts\activate
+
+# install pip lib for server
+pip install -r requirements.txt
+# Command For SET APP
+SET APP=app
+# Command For Run Server Debug Mode
+flask run --debug
