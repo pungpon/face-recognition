@@ -16,7 +16,12 @@ def create_app(config_class=Config):
     socketio.init_app(app)
 
     # Register blueprints here
+    # Register Main
     from app.main import main as blueprint_main
     app.register_blueprint(blueprint_main)
+    
+    # Register Faculty
+    from app.faculty import faculty as blueprint_faculty
+    app.register_blueprint(blueprint_faculty, url_prefix='/faculty')
 
     return app
