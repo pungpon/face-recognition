@@ -20,10 +20,19 @@
       type="text/css"
     />
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>
   </head>
   <body>
-    {% block content %} {% endblock %}
+  <div class="container-fluid">
+      <div class="row flex-nowrap">
+        {% include 'navigation.html'   %}
+          <div class="col py-3">
+            {% block content %}
+              
+            {% endblock %}
+          </div>
+      </div>
+  </div>
   </body>
 </html>
